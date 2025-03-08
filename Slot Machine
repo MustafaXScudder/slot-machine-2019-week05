@@ -1,0 +1,28 @@
+README
+
+How It Works:
+
+HTML (index.html):
+Defines the structure of the game.
+Links to the CSS and JavaScript files.
+CSS (styles.css):
+Styles the game, including the spinning animation.
+JavaScript (script.js):
+Handles the game logic, including spinning, winning, and resetting.
+
+
+User Interaction:
+The user enters a bet and clicks "Spin."
+The spin function validates the bet, updates the balance, and starts the spinning animation.
+
+Spinning Animation:
+The reels spin for 2 seconds (SPIN_DURATION), with symbols changing rapidly every 100ms (SYMBOL_CHANGE_INTERVAL).
+The spinning animation is applied when the .spinning class is added to the reels.
+The win/loss messages are styled dynamically using the .winning and .losing classes.
+
+Final Result:
+After the spin ends, the reels display the final results.
+The checkWin function determines if the user won and updates the balance and message accordingly.
+
+Reset:
+The "Reset Balance" button resets the balance and clears the message.
