@@ -1,0 +1,119 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+
+body {
+    text-align: center;
+    padding-top: 200px;
+    font-family: "Monoton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-top: 0px;
+    background-image: url('/Users/user/Slot Machine/4c91b583-9c24-49f0-9310-a6bfdf2621bb 2.jpg'); /* Your image URL */
+    background-size: cover; /* Make the background cover the entire viewport */
+    background-position: center; /* Center the image */
+    background-attachment: fixed; /* Keep the background fixed during scrolling */
+    margin: 0; /* Remove any default margin */
+    height: 100vh; /* Make sure the body height covers the full viewport */
+    color: blanchedalmond;
+    font-size: larger;
+    padding-left: 40px;
+
+  }
+  .monoton-regular {
+    font-family: "Monoton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  
+  .slot-machine {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    box-sizing: border-box;
+    box-shadow: #333;
+    padding-top: 0px;
+    border: white;
+  }
+  
+  .reel {
+    width: 150px;
+    height: 150px;
+    border: 5px solid linear-gradient(goldenrod, gold, whitesmoke) ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    margin: 0 10px;
+    border-radius: 12px;
+    transition: transform 0.5s ease-in-out;
+    overflow: hidden; /* Ensure symbols don't overflow during animation */
+  }
+  
+  .reel.spinning {
+    animation: spin 0.5s linear infinite; /* Smooth spinning animation */
+  }
+  /* this is what makes the animation happen on the x axis. this gets triggered by the javascript function*/
+  
+  @keyframes spin {
+    0% { transform: rotateX(0deg); }
+    100% { transform: rotateX(360deg); }
+    
+  }
+  
+  #message, #balance {
+    margin-top: 20px;
+    font-size: 24px;
+    color: goldenrod;
+  }
+  
+  /* Button Styles */
+  button {
+    background: conic-gradient(
+      from 45deg,
+      #d4af37 20%, /* Dark gold */
+      #f7e07f 50%, /* Light gold */
+      #d4af37 90%, /* Dark gold */
+      #f7e07f 100% /* Light gold */
+    );
+    background-size: 200% 200%;
+    background-position: center;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out; /* Smooth transition for hover effects */
+  }
+  
+  button:hover {
+    background-position: 0% 0; /* Move the gradient for the shine effect */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* More pronounced shadow on hover */
+  }
+  
+  button:active {
+    background-position: -200% 0; /* Further movement for when the button is clicked */
+    box-shadow: 0px 4px 8px rgb(250, 248, 248); /* Slight shadow when clicked */
+  }
+  
+  input {
+    padding: 10px;
+    font-size: 18px;
+    width: 100px;
+    border-radius: 15px;
+  }
+  
+  /* Additional Styles for Win/Loss Messages */
+  .winning {
+    color: green;
+    font-weight: bold;
+  }
+  
+  .losing {
+    color: red;
+    font-weight: bold;
+  }
